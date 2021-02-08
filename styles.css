@@ -1,16 +1,255 @@
+body{
+  background: url('img/bali.svg');
+  margin: 0;
+}
+.foundation{
+  width: 83.5%;
+  margin:auto;
+  margin-left: 200px;
+}
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 88px;
+}
+.logo,.menu{
+  display: inline-block;
+}
+.logo{
+  width: 146px;
+  height: 55px;
+  background: url('img/logo.svg') no-repeat;
+}
 .menu__item{
-  font-family: museo_sans_cyrl, arial, helvetica, sans-serif;
-  font-weight: bold;
+  font: 700 22px/26px museo_sans_cyrl, arial, helvetica, sans-serif;
+  color: #F8EEE4;
+  margin-right: 34px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.menu__item:last-child{
+  margin-right: 0;
+}
+.menu__item:hover{
+  opacity: .5;
+}
+#menu__toggle {
+  opacity: 0;
+}
+.main{
+  padding: 0 63% 0 0;
+  background: url('img/one.png') right 40% top 83% no-repeat,
+              url('img/two.png') right 17% top 74% no-repeat,
+              url('img/three.png') right top 75% no-repeat;
+  margin-right: -7.3%;
 }
 .main__title{
-  font-family: pt_serifbold, arial, helvetica, sans-serif;
+  font: 700 280px/371px pt_serifbold, arial, helvetica, sans-serif;
+  margin: 130px 0 0 0;
+  color: #F8EEE4;
+  opacity: 0.4;
 }
 .main__subtitle{
-  font-family: pt_serifbold, arial, helvetica, sans-serif;
+  font: 700 98px/130px pt_serifbold, arial, helvetica, sans-serif;
+  margin: -140px 0 0 85px;
+  color: #F8EEE4;
 }
 .main__text{
-  font-family: museo_sans_cyrl, arial, helvetica, sans-serif;
+  font: 22px/26px museo_sans_cyrl, arial, helvetica, sans-serif;
+  color: #F8EEE4;
+  margin: 16px 0 0 19px;
+  padding-right:20%;
 }
 .main__button{
-  font-family: museo_sans_cyrl, arial, helvetica, sans-serif;
+  font: 22px/26px museo_sans_cyrl, arial, helvetica, sans-serif;
+  padding: 17px 86px;
+  background: #D4BEA3;
+  color: #FFFFFF;
+  border-radius: 48px;
+  margin: 34px 0 0 19px;
+  cursor: pointer;
+}
+.main__button:hover{
+  opacity: .3;
+}
+@media (max-width:1680px){
+body{
+  background: url('img/bali1366.png');
+}
+.foundation{
+  width: 83.5%;
+  margin:auto;
+  margin-left: 140px;
+}
+.header{
+  margin-top: 64px;
+}
+.logo{
+  width: 104px;
+  height: 39px;
+  background: url('img/logo1366.png') no-repeat;
+}
+.menu__item{
+  font: 700 16px/19px museo_sans_cyrl, arial, helvetica, sans-serif;
+  margin-right: 21px;
+}
+.main{
+  padding: 0 63% 0 0;
+  background: url('img/one1366.png') right 40% top 83% no-repeat,
+              url('img/two1366.png') right 17% top 74% no-repeat,
+              url('img/three1366.png') right top 75% no-repeat;
+  margin-right: -7.3%;
+}
+.main__title{
+  font: 700 200px/265px pt_serifbold, arial, helvetica, sans-serif;
+  margin: 96px 0 0 0;
+}
+.main__subtitle{
+  font: 700 70px/93px pt_serifbold, arial, helvetica, sans-serif;
+  margin: -105px 0 0 60px;
+}
+.main__text{
+  font: 16px/19px museo_sans_cyrl, arial, helvetica, sans-serif;
+  margin: 16px 0 0 19px;
+  padding-right:16%;
+}
+.main__button{
+  font: 16px/19px museo_sans_cyrl, arial, helvetica, sans-serif;
+  padding: 12px 60px;
+  margin: 20px 0 0 20px;
+}
+}
+@media (max-width:1200px){
+body{
+  background: url('img/bali1024.png');
+}
+.foundation{
+  width: 92%;
+  margin-left: 41px;
+}
+.main{
+  padding: 0 60% 0 0;
+  background: url('img/one1366.png') right 37.7% top 84% no-repeat,
+              url('img/two1366.png') right 7.5% top 75% no-repeat,
+              url('img/three1366.png') right -13.5% top 75% no-repeat;
+  margin-right: -4.3%;
+}
+.main__text{
+  font: 16px/19px museo_sans_cyrl, arial, helvetica, sans-serif;
+  margin: 16px 0 0 19px;
+  padding-right:1%;
+}
+.main__button{
+  font: 16px/19px museo_sans_cyrl, arial, helvetica, sans-serif;
+  margin: 23px 0 0 17px;
+}
+}
+@media (max-width:800px){
+body{
+  background: url('img/mobilebali.png');
+}
+.foundation{
+  width: 80%;
+}
+.header{
+  margin-top: 42px;
+}
+#menu__toggle {
+  opacity: 0;
+}
+.menu__btn {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 51px;
+  right: 33px;
+  width: 25px;
+  height: 29px;
+  cursor: pointer;
+  z-index: 1;
+}
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #FCF5ED;
+}
+.menu__btn > span::before {
+  content: '';
+  top: -8px;
+}
+.menu__btn > span::after {
+  content: '';
+  top: 8px;
+}
+.menu{
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  width: 375px;
+  height: 100%;
+  margin:0;
+  background-color: #F8EEE4;
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+  list-style: none;
+  text-align: center;
+}
+.menu__item{
+  display: block;
+  font: 700 30px/35px museo_sans_cyrl, arial, helvetica, sans-serif;
+  margin-bottom: 23px;
+  margin-right: 0;
+  position: relative;
+  color: #000;
+}
+.menu__item:first-child{
+  margin-top: 186.6px;
+  margin-bottom: 27px;
+}
+.menu__item:last-child{
+  margin-right: 8px;
+  margin-top: 27px;
+}
+#menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu{
+  visibility: visible;
+  left: 0;
+}
+.main{
+  background: none;
+  padding: 0;
+}
+.main__title{
+  font: 700 170px/225px pt_serifbold, arial, helvetica, sans-serif;
+  margin: 59px 0 0 -8%;
+}
+.main__subtitle{
+  font: 700 60px/79px pt_serifbold, arial, helvetica, sans-serif;
+  margin: -78px 0 0 34px;
+}
+.main__text{
+  font: 18px/22px museo_sans_cyrl, arial, helvetica, sans-serif;
+  margin: 11.5% 4% 0 0;
+  text-align: center;
+}
+.main__button{
+  font: 16px/19px museo_sans_cyrl, arial, helvetica, sans-serif;
+  margin: 34px 0 0 11.5%;
+}
 }
