@@ -34,6 +34,9 @@ body{
 .menu__item:hover{
   opacity: .5;
 }
+#menu__toggle {
+  opacity: 0;
+}
 .main{
   padding: 0 63% 0 0;
   background: url('img/one.png') right 40% top 83% no-repeat,
@@ -152,8 +155,81 @@ body{
 .header{
   margin-top: 42px;
 }
+#menu__toggle {
+  opacity: 0;
+}
+.menu__btn {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 51px;
+  right: 33px;
+  width: 25px;
+  height: 29px;
+  cursor: pointer;
+  z-index: 1;
+}
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #FCF5ED;
+}
+.menu__btn > span::before {
+  content: '';
+  top: -8px;
+}
+.menu__btn > span::after {
+  content: '';
+  top: 8px;
+}
+.menu{
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  width: 375px;
+  height: 100%;
+  margin:0;
+  background-color: #F8EEE4;
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+  list-style: none;
+  text-align: center;
+}
 .menu__item{
-  display: none;
+  display: block;
+  font: 700 30px/35px museo_sans_cyrl, arial, helvetica, sans-serif;
+  margin-bottom: 23px;
+  margin-right: 0;
+  position: relative;
+  color: #000;
+}
+.menu__item:first-child{
+  margin-top: 186.6px;
+  margin-bottom: 27px;
+}
+.menu__item:last-child{
+  margin-right: 8px;
+  margin-top: 27px;
+}
+#menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu{
+  visibility: visible;
+  left: 0;
 }
 .main{
   background: none;
