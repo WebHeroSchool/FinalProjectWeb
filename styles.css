@@ -1,5 +1,5 @@
 body{
-  background: url('img/bali.svg');
+  background: url('img/bali.svg') no-repeat;
   margin: 0;
 }
 .foundation{
@@ -74,9 +74,6 @@ body{
   opacity: .3;
 }
 @media (max-width:1680px){
-body{
-  background: url('img/bali1366.png');
-}
 .foundation{
   width: 83.5%;
   margin:auto;
@@ -121,9 +118,6 @@ body{
 }
 }
 @media (max-width:1200px){
-body{
-  background: url('img/bali1024.png');
-}
 .foundation{
   width: 92%;
   margin-left: 41px;
@@ -145,9 +139,19 @@ body{
   margin: 23px 0 0 17px;
 }
 }
-@media (max-width:800px){
+@media (max-width:900px){
+.foundation{
+    width: 85%;
+}
+.main{
+  background: none;
+  padding: 0;
+  text-align: center;
+}
+}
+@media (max-width:540px){
 body{
-  background: url('img/mobilebali.png');
+  min-width: 375px;
 }
 .foundation{
   width: 80%;
